@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monika Soni</title>
+<!---firebase CDN-->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+ <!--Font Awesome CDN-->
+ <script src="https://kit.fontawesome.com/9b0177f45b.js" crossorigin="anonymous"></script>
+
+ <!--slick slider-->
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+<!--Custom Stylesheet-->
+<link rel="stylesheet" href="mystyle.css"/>
+
+
+<style>
+.banner{
+    background-color: blue;
+}
+/**Second slider*/
+.site-slider-two{
+    
+    position: relative;
+    height:30%;
+
+}
+.site-slider-two .product{
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 250px;
+    margin: 4px;
+
+}
+.site-slider-two .product img{
+    width: 100%;
+    height: 100%;
+    max-height:300px;
+    margin: auto;
+    border-radius: 4px;
+    transition: .3s;
+}
+.product :not(img){
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    color: #fefefe;
+    text-align: center;
+    width: 90%;
+    opacity: 0;
+    transition: .3s;
+}
+.product p{
+    top: 40%;
+}
+.product a{
+    top: 72%;
+  padding-right: 950px;
+  font-size:40px;
+}
+.product:hover img{
+    filter: blur(3px) brightness(60%);
+    box-shadow: 0 0 16 cyan;
+
+}
+.product:hover :not(img){
+    opacity: 1;
+}
+.site-btn .btn-span{
+    padding: 0.8rem 1.9rem;
+    border-radius: 4rem;
+    border: 1px solid var(--border);
+    background-color: white;
+    color: var(--light-gray);
+    
+
+}
+.slider-two .slick-track .product:hover span{
+    background-color: var(--primary-color);
+}
+
+</style>
+
+</head>
+<body>
+    
+  
+      <!--Main Section-->
+    <main>
+    <!--First Slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-12">
+       
+            </div>
+        <div class="col-md-4 col-12">
+            <img src="logo2.jpg" >
+        </div>
+        <div class="col-md-4 col-12 text-right">  
+           
+        </div>
+        </div>
+    </div>
+
+    
+    <!--/First Slider-->
+<!--Second Slider-->
+<div class="container-fluid">
+    <div class="site-slider-two px-md-4">
+        <div class="row slider-two text-center">
+            <div class="col-md-1 product pt-md-5 pt-4"></div>
+            <div class="col-md-3 product pt-md-5 pt-4">
+                <img src="work.jpeg" alt="work" />
+                <h3 >Work</h3><p>I am a software engineer & designer by profession. Also with the passion of Mural Artist. </p>
+                  
+            </div>
+            <div class="col-md-3 product pt-md-5 pt-4">
+                <img src="about.jpeg" alt="about" />
+                <h3>About</h3><p>I am Monika Soni From Rajasthan currently persuing M.C.A from KIIT. My hobbies are graphic designing and painting. </p>   
+            </div>
+            <div class="col-md-3 product pt-md-5 pt-4">
+                <img src="contact.jpeg" alt="contact" />
+                <h3>Contact</h3><p>Insta: @monika_agroya ;Fb:Deactivated ;Whatsapp no.: 9983047811</p>   
+            </div>
+            <div class="col-md-1 product pt-md-5 pt-4"></div>
+        </div>
+       
+    </div>
+    </div>
+    
+    
+</div>
+<!--/Second Slider-->
+
+
+
+
+    </main>
+    <!--/Main Section-->
+
+       
+
+  
+       
+
+
+
+  <!---Scripts-->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.1/dist/sweetalert2.all.min.js"></script>
+
+
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id02');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+    <!---/Scripts-->
+
+</body>
+</html>
